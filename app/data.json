@@ -1,6 +1,8 @@
-'use strict';
-
-var data=[
+{
+  "count": 20,
+  "start": 0,
+  "total": 29,
+  "subjects": [
     {
       "rating": {
         "max": 10,
@@ -1404,21 +1406,6 @@ var data=[
       "alt": "https://movie.douban.com/subject/26726098/",
       "id": "26726098"
     }
-  ];
-angular.module('myApp.in_theater', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/in_theaters/:id', {
-    templateUrl: 'in_theaters/view.html',
-    controller: 'in_theater_Ctrl'
-  });
-}])
-
-.controller('in_theater_Ctrl', ['$scope','$http',function($scope,$http) {
-	$http.get('data.json',{}).then(function(data){
-//		console.log(data);
-		$scope.subjects=data.data.subjects;
-	},function(err){
-		console.log(err);
-	})
-}]);
+  ],
+  "title": "正在上映的电影-北京"
+}
