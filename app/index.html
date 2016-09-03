@@ -24,11 +24,12 @@
 					<li auto-focus><a href="#/top250/1">TOP</a></li>
 					<li auto-focus>
 						<form class="navbar-form navbar-left">
-						<input type="text" class="form-control" placeholder="Search..."> </form>
+							<input type="text" class="form-control" placeholder="Search..."> </form>
 					</li>
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
+			<div class="loader" ng-show="loading"></div>
 		</div>
 	</div>
 	<script src="bower_components/angular/angular.js"></script>

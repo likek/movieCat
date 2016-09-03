@@ -8,10 +8,13 @@ angular.module('myApp.in_theater', ['ngRoute'])
   });
 }])
 
-.controller('in_theater_Ctrl', ['$scope','service_jsonp',function($scope,service_jsonp) {
+.controller('in_theater_Ctrl', ['$scope','service_jsonp','$rootScope',function($scope,service_jsonp,$rootScope) {
 	$scope.massage='';
+	$rootScope.loading=true;
 	service_jsonp.newjsonp('https://api.douban.com/v2/movie/in_theaters',{},function(data){
 		$scope.subjects=data.subjects;
+		$scope.totalC=data.total;
+		$rootScope.loading=false;
 		$scope.$apply();
 	})
 }]);
