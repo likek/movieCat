@@ -6,9 +6,10 @@ angular.module('moviecat', [
   , 'myApp.in_theater'
   , 'myApp.top250'
   ,'module_service'
+  ,'module_auto_focus'
 ]).
 config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.otherwise({
-		redirectTo: '/in_theater/1'
+		redirectTo: '/in_theaters/1'
 	});
 }]);

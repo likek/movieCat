@@ -4,7 +4,7 @@ angular.module('myApp.in_theater', ['ngRoute']).config(['$routeProvider', functi
 		templateUrl: 'in_theaters/view.html'
 		, controller: 'in_theater_Ctrl'
 	});
-}]).controller('in_theater_Ctrl', ['$scope', 'service_jsonp', '$routeParams', '$route', function ($scope, service_jsonp, $routeParams, $route) {
+}]).controller('in_theater_Ctrl', ['$scope', 'service_jsonp', '$routeParams', '$route',function ($scope, service_jsonp, $routeParams, $route) {
 	$scope.massage = '';
 	$scope.loading = true;
 	$scope.currentPage = $routeParams.page;
