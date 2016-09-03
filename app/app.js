@@ -5,6 +5,7 @@ angular.module('moviecat', [
   , 'myApp.coming_soon'
   , 'myApp.in_theater'
   , 'myApp.top250'
+  ,'module_service'
 ]).
 config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.otherwise({

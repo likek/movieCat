@@ -1,4 +1,5 @@
 <h1 class="page-header">正在热映</h1>
+<h3>{{massage}}</h3>
 <div class="list-group">
 	<a ng-repeat="item in subjects" href="{{item.alt}}" class="list-group-item">
 	<span class="badge">{{item.rating.average}}</span>
@@ -8,7 +9,7 @@
 		</p>
 			<div class="media-body">
 				<h4 class="media-heading">{{item.title}}</h4>
-				<p>导演：<span ng-repeat="dir in item.directors">{{dir.name}}&nbsp;&nbsp;&nbsp;</span></p>
+				<p>导演：<span ng-repeat="dir in item.directors">{{dir.name+($last ? '' : '、')}}</span></p>
 				<p>类型：{{item.genres.join('、')}}</p>
 			</div>
 		</div>
