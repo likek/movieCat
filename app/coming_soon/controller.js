@@ -3,7 +3,7 @@
 angular.module('myApp.coming_soon', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/coming_soon/:count', {
+  $routeProvider.when('/coming_soon/:page', {
     templateUrl: 'coming_soon/view.html',
     controller: 'coming_soon_Ctrl'
   });
