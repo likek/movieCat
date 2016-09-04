@@ -38,8 +38,8 @@
 					<li auto-focus><a href="#/coming_soon/1">即将上映</a></li>
 					<li auto-focus><a href="#/top250/1">TOP</a></li>
 					<li auto-focus>
-						<form class="navbar-form navbar-left">
-							<input type="text" class="form-control" placeholder="Search..."> </form>
+						<form class="navbar-form navbar-left" ng-submit=search() ng-controller="main_search">
+							<input type="text" class="form-control" placeholder="Search..." ng-model="searchInp"> </form>
 					</li>
 				</ul>
 			</div>

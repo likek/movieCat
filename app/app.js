@@ -10,4 +10,12 @@ config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.otherwise({
 		redirectTo: '/in_theaters/1'
 	});
+}]).controller('main_search',['$scope','$route',function($scope,$route){
+	$scope.searchInp='';
+	$scope.search=function(){
+		$route.updateParams({
+			type:'search',
+			q:$scope.searchInp
+		})
+	}
 }]);

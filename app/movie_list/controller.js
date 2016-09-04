@@ -18,6 +18,7 @@ angular.module('myApp.movie_list', ['ngRoute'])
 	service_jsonp.newjsonp('https://api.douban.com/v2/movie/'+$routeParams.type, {
 		"start": start
 		, "count": count
+		, "q": $routeParams.q
 	}, function (data) {
 		$scope.subjects = data;
 		$scope.totalC = data.total;
