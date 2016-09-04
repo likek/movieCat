@@ -1,7 +1,7 @@
 <h1 class="page-header">{{subjects.title}}</h1>
 <h3>{{massage}}</h3>
 <div class="list-group">
-	<a ng-repeat="item in subjects.subjects" href="{{item.alt}}" class="list-group-item"> <span class="badge">{{item.rating.average}}</span>
+	<a ng-repeat="item in subjects.subjects" href="#/detail/{{item.id}}" class="list-group-item"> <span class="badge">{{item.rating.average}}</span>
 		<div class="media">
 			<p class="media-left"> <img ng-src="{{item.images.small}}" alt=""> </p>
 			<div class="media-body">

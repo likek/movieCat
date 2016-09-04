@@ -1,4 +1,4 @@
-var jsonp=angular.module('module_service',[]);
+var jsonp=angular.module('service_jsonp',[]);
 jsonp.service('service_jsonp',['$window','$document',function($window,$document){
 	this.newjsonp=function(url,config,callback){
 		var cbFunctionName='cbFunctionName'+parseInt(Math.random()*10000000);

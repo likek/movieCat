@@ -1,4 +1,4 @@
-var autofocus=angular.module('module_auto_focus',[]);
+var autofocus=angular.module('directive_auto_focus',[]);
 autofocus.directive('autoFocus',['$location',function($location){
 	return {
 		restrict:'A',

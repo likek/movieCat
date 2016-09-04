@@ -8,16 +8,17 @@
 	<title>豆瓣电影</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="app.css"> </head>
-	<script src="/app/bower_components/script.js/dist/script.min.js"></script>
-	<script src="/app/bower_components/angular-loader/angular-loader.min.js"></script>
+	<script src="bower_components/script.js/dist/script.min.js"></script>
+	<script src="bower_components/angular-loader/angular-loader.min.js"></script>
 	<script>
 		$script([
 			'bower_components/angular/angular.js',
 			'bower_components/angular-route/angular-route.js',
-			'/app/components/jsonp.js',
-			'/app/components/auto-focus.js',
-			'/app/movie_list/controller.js',
-			'/app/app.js'
+			'components/jsonp.js',
+			'components/auto-focus.js',
+			'movie_detail/controller.js',
+			'movie_list/controller.js',
+			'app.js'
 		],function(){
 			console.log('ok');
 			angular.bootstrap(document,['moviecat']);

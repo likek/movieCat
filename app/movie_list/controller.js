@@ -10,6 +10,7 @@ angular.module('myApp.movie_list', ['ngRoute'])
 }])
 
 .controller('movie_list_Ctrl', ['$scope', 'service_jsonp', '$routeParams', '$route', function ($scope, service_jsonp, $routeParams, $route) {
+	$scope.subjects={title:'loading...'}
 	$scope.massage = '';
 	$scope.loading = true;
 	$scope.currentPage = $routeParams.page;
