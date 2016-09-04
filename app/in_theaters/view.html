@@ -16,8 +16,8 @@
 	<p>总共有{{totalC}}条数据,共{{totalPage}}页</p>
 	<nav>
 		<ul class="pager">
-			<li  ng-class='{disabled:currentPage<=1}' ng-click=go(currentPage-1)><a>Previous</a></li>
-			<li  ng-class='{disabled:currentPage>=totalPage}' ng-click=go(currentPage-0+1)><a>Next</a></li>
+			<li ng-show='currentPage>1' ng-click=go(currentPage-1)><a>Previous</a></li>
+			<li ng-show='currentPage<totalPage' ng-click=go(currentPage-0+1)><a>Next</a></li>
 		</ul>
 	</nav>
 </div>
