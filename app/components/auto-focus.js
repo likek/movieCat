@@ -6,7 +6,10 @@ autofocus.directive('autoFocus',['$location',function($location){
 			$scope.$location=$location;
 			$scope.$watch('$location.path()',function(now){
 				var aEle=elem.children().attr('href');
-				var currentPath=aEle.substr(1);
+				console.log(aEle);
+				if(aEle!=undefined){
+					var currentPath=aEle.substr(1);
+				}
 				if(now.startsWith(currentPath)){
 					elem.parent().children().removeClass('active');
 					elem.addClass('active');
