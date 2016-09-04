@@ -16,7 +16,7 @@ config(['$routeProvider', function ($routeProvider) {
 		redirectTo: '/in_theaters/1'
 	});
 }]).controller('main_search',['$scope','$route',function($scope,$route){
-	$scope.searchInp='';
+	$scope.searchInp='123';
 	$scope.search=function(){
 		$route.updateParams({
 			type:'search',

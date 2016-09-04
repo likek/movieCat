@@ -10,7 +10,7 @@ angular.module('myApp.movie_detail',[]).config(['$routeProvider',function($route
 		title:'loading...',
 		summary:'loading...'
 	}
-	service_jsonp.newjsonp(myAppConfig.detailAddr+id,{},function(data){
+	service_jsonp.newjsonp(myAppConfig.detailAddr+id,function(data){
 		$scope.subjects=data;
 		$scope.loading=false;
 		$scope.$apply();
