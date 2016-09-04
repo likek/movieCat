@@ -5,10 +5,26 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My AngularJS App</title>
+	<title>豆瓣电影</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/js/bootstrap.min.js">
 	<link rel="stylesheet" href="app.css"> </head>
+	<script src="/app/bower_components/script.js/dist/script.min.js"></script>
+	<script src="/app/bower_components/angular-loader/angular-loader.min.js"></script>
+	<script>
+		$script([
+			'bower_components/angular/angular.js',
+			'bower_components/angular-route/angular-route.js',
+			'/app/components/jsonp.js',
+			'/app/components/auto-focus.js',
+			'/app/coming_soon/controller.js',
+			'/app/in_theaters/controller.js',
+			'/app/top250/controller.js',
+			'/app/app.js'
+		],function(){
+			console.log('ok');
+			angular.bootstrap(document,['moviecat']);
+		});
+	</script>
 
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -32,20 +48,6 @@
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
 		</div>
 	</div>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<!-- 主模块 -->
-	<script src="/app/components/jsonp.js"></script>
-	<script src="/app/components/auto-focus.js"></script>
-	<script src="/app/coming_soon/controller.js"></script>
-	<script src="/app/in_theaters/controller.js"></script>
-	<script src="/app/top250/controller.js"></script>
-	<script src="app.js"></script>
-	<!--<script src="components/http.js"></script>
-  <script src="components/auto-focus.js"></script>-->
-	<!-- 正在热映子模块 -->
-	<!--  <script src="movie_list/controller.js"></script>-->
-	<!-- 其他子模块 -->
 </body>
 
 </html>
