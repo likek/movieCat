@@ -9,14 +9,14 @@ angular.module('myApp.movie_list', ['ngRoute'])
   });
 }])
 
-.controller('movie_list_Ctrl', ['$scope', 'service_jsonp', '$routeParams', '$route', function ($scope, service_jsonp, $routeParams, $route) {
+.controller('movie_list_Ctrl', ['$scope', 'service_jsonp', '$routeParams', '$route','myAppConfig', function ($scope, service_jsonp, $routeParams, $route,myAppConfig) {
 	$scope.subjects={title:'loading...'}
 	$scope.massage = '';
 	$scope.loading = true;
 	$scope.currentPage = $routeParams.page;
-	var count = 4
+	var count = myAppConfig.listCount
 		, start = ($scope.currentPage - 1) * count;
-	service_jsonp.newjsonp('https://api.douban.com/v2/movie/'+$routeParams.type, {
+	service_jsonp.newjsonp(myAppConfig.listAddr+$routeParams.type, {
 		"start": start
 		, "count": count
 		, "q": $routeParams.q

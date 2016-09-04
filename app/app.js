@@ -6,7 +6,11 @@ angular.module('moviecat', [
   ,'myApp.movie_list'
   ,'service_jsonp'
   ,'directive_auto_focus'
-]).
+]).constant('myAppConfig',{
+	listCount:4,
+	listAddr:'https://api.douban.com/v2/movie/',
+	detailAddr:'https://api.douban.com/v2/movie/subject/'
+}).
 config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.otherwise({
 		redirectTo: '/in_theaters/1'
